@@ -3,17 +3,17 @@
 #include <queue>
 using namespace std;
 
-int maze[1001][1001];
-bool mark[1001][1001];
+int maze[1001][1001];//存放行李的位置信息
+bool mark[1001][1001]; //该点是否已被访问
 
 struct N{
     int x,y;
     char c;
 };
 queue <N> q;
-int go[][2] = {{1,0},{0,1}};
+int go[][2] = {{1,0},{0,1}}; // 移动数组向上或向右
 
-bool BFS(int a,int b,int n){
+bool BFS(int a,int b,int n){ // 通过广度优先搜索不断得到新状态并判断已得到的行李的数量是否已经等于n
     int cnt = 0;
     while(q.empty() == false){
         N now = q.front();
