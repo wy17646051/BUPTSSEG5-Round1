@@ -1,3 +1,4 @@
+
 #include<cstdio>
 #include<algorithm>
 using namespace std;
@@ -19,7 +20,7 @@ int main()
             scanf("%d",&p[j]);
         }
         sort(p + 1,p + m + 1);  //将位置数组排序，得到最大与最小位置
-        sort(a + p[1],a + p[m]);  //将最大与最小之间的数排序
+        sort(a + p[1],a + p[m]);  //将最大与最小之间的数排序 这里考虑欠缺了，默认将最小与最大位置之间当成连续的，导致后来结果有问题
         bool flag = false;
         if(p[1] > 1){
             for(int i = 1;i < p[1];i++){ //若最小交换位置大于1，且其小于最小交换位置的不能交换到所有数存在降序，则输出NO；
