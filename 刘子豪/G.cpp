@@ -15,7 +15,10 @@ using namespace std;
 
 
 int main() {
-
+	/*
+	程序思路：
+	对数组a排序，然后将0和1，2和3，...n-2和n-1组成一队
+	*/
     return 0;
 }
 #endif
