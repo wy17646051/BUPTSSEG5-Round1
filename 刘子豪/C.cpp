@@ -13,6 +13,10 @@ using namespace std;
 /*C题*/
 
 
+/*
+	本题没有实现完整的代码，但是写出了所有边界数据的处理，并写了一般情况下求解的主要思路
+*/
+
 double minDistance(int a, int b, int c, int x1, int x2, int y1, int y2) {
     //边界数据1：当x1=x2或y1=y2时，最短路径一定不用走avenue
     if (x1 == x2) {
