@@ -21,7 +21,7 @@ int main() {
                     i++;
                 }
             }
-            else if(temp%2==0){
+            else if(temp%2==0){//这里改为if可能不会超时
                 temp=temp/2;
                 result++;
                 if(temp==2){
