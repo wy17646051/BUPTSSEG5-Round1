@@ -3,9 +3,9 @@ struct carray{
 	int number;
 	int count;
 };
-//��ʦ������ҵ�˼·���ҳ�ÿһ��test���ظ���������������һ���ж��ٲ�ͬ�������Ƚ�������С��
-//˭��С�𰸾���˭�������ͬ���1���Ǵ𰸣�ʾ����test���ˣ�����OJ������
-//��ʦ�Ҳ�֪�����������Բ��ԣ��ҵ������ǣ���һ�鲻�����ظ����֣��ڶ�����붼��һ�������� 
+//老师这道题我的思路是找出每一个test中重复的数的最大次数和一共有多少不同的数，比较两个大小，
+//谁更小答案就是谁，如果相同则减1就是答案，示例的test过了，可是OJ过不了
+//老师我不知道我理解的题对不对，我的理解是，第一组不能有重复数字，第二组必须都是一样的数字。
 int main(){
 	int count;
 	int ans[10000];
@@ -20,7 +20,7 @@ int main(){
 		struct carray countarray[10000];
 		
 		for(s=0;s<get;s++){
-			scanf("%d",&array[s]);
+			scanf("%d",&array[s]);//得到输入的test数 
 		}
 		int gg;
 		bool isHave=false;
@@ -41,6 +41,7 @@ int main(){
 			gg++;
 		}
 		}
+		//以上代码得到gg，gg为不同的数字有多少个
 		isHave=false;
 		int mm=0;
 		for(s=0;s<get;s++){
@@ -68,6 +69,7 @@ int main(){
 				max=countarray[s].count;
 			}
 		}
+		//以上代码得到max，max为最大的有重复的数字的次数 
 		if(max>gg){
 			ans[i]=gg;
 		}
@@ -78,6 +80,7 @@ int main(){
 		if(max==gg){
 			ans[i]=max-1;
 		}
+		//选择max和gg中较小的作为答案，如果两个相等则减1作为答案 
 			int r;
 		for(r=0;r<=get;r++){
 			array[r]=0;
@@ -88,7 +91,7 @@ int main(){
 			get=0;
 			gg=0;mm=0;
 		}
-
+              //初始化各个变量。 
 	}
 	for(i=0;i<count;i++){
 		printf("%d\n",ans[i]);
